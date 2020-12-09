@@ -1,0 +1,18 @@
+ERROR:root:the washing machine is leaking
+CRITICAL:root:the house is on fire
+ERROR:root:the washing machine is leaking
+CRITICAL:root:the house is on fire
+WARNING:root:we r almost out of milk
+INFO:root:its sunny today
+ERROR:root:the washing machine is leaking
+CRITICAL:root:the house is on fire
+WARNING:root:we r almost out of milk
+INFO:root:its sunny today
+ERROR:root:the washing machine is leaking
+CRITICAL:root:the house is on fire
+WARNING:root:we r almost out of milk
+INFO:root:its sunny today
+DEBUG:root:i had eggs for breakfast
+CRITICAL:root:the house is on fire
+ERROR:root:the washing machine is leaking
+CRITICAL:root:the house is on fire
