@@ -1,0 +1,1 @@
+print("Addition of two numbers is : ",100+1)
