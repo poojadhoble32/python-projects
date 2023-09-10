@@ -1,28 +1,37 @@
-from functools import reduce
+import time
+import threading 
 
-def AcceptList():
-    L = []
-    print("please enter size:")
+def numberlist(no):
     
-    size = int(input())
+    print("1 to 50 numbers are : ")
     
-    print("enter numbers in list:")
+    for i in range(1,no+1):
+        print(i)
     
-    for i in range(0,size):
+def revlist(no):
+
+    print("50 to 1 numbers are : ")
     
-        L.append(int(input()))
-        
-    F = list(filter(lambda x : x%2!=0,L))
+    for i in range(no,0,-1):
+        print(i)
+            
+def accept():
+
+    num = 50
     
-    print("Prime numbers after filtered:",F)
+    T1 = threading.Thread(target = numberlist, args = (num,))
+    T2 = threading.Thread(target = revlist, args = (num,))
     
-    M = list(map(lambda x : x*2,F))
+    T1.start()
+    T1.join()
     
-    print("updated list after multiply by 2 of each filtered number:",M)
+    T2.start()
+    T2.join()
     
-    R = reduce(lambda x,y : x if x>y else y,M)
-    
-    print("Max of all list numbers after filter and mapping:",R)
+    print("exit from main")
 
 if __name__ == "__main__":
-    AcceptList()
+    start_time = time.process_time()
+    accept()
+    end_time = time.process_time()
+    print("total execution time is : ",start_time - end_time)
